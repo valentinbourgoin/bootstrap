@@ -1,18 +1,6 @@
 <?php
 
 class Tools {
-	/*
-	 * Chargement automatique des classes (models)
-	 * @param classname Nom de la classe
-	 */
-	public static function autoload($className) {
-        if(!class_exists($className)) {
-            if(is_readable(ROOT_PATH.MODEL_PATH.strtolower($className).".class.php")) {
-                require_once(ROOT_PATH.MODEL_PATH.strtolower($className).".class.php");
-            }
-        }
-    }
-
     /*
 	 * Protège un champ avant l'insert dans la BDD 
 	 * @param value Champ à protéger

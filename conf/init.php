@@ -20,6 +20,7 @@ $twig->addExtension($escaper);
  */
 $twig->addGlobal('DEBUG', DEBUG);
 $twig->addGlobal('MEDIA_URL', MEDIA_URL);
+$twig->addGlobal('STATIC_URL', STATIC_URL);
 $twig->addGlobal('ROOT_URL', ROOT_URL);
 $twig->addGlobal('APPID', APPID);
 $twig->addGlobal('APP_URL', APP_URL);

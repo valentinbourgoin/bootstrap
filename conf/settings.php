@@ -8,20 +8,23 @@ define('DB_SERVER', '');
 define('DB_USER', '');
 define('DB_PASS', '');
 define('DB_BASE', '');
+define('DB_PORT', '');
 
 /*
  * Paths
  */
-define('ROOT_URL', 'http://localhost:8888/');
+define('ROOT_URL', '/YOUR_PATH/');
 define('ROOT_PATH', realpath('.')."/");
 define('APP_URL', '');
 define('UPLOAD_PATH', ROOT_PATH . 'media/');
 
 define('LIB_PATH', 'lib/');
 define('MODEL_PATH', 'models/');
+define('CONTROLLER_PATH', 'controllers/');
 define('TEMPLATE_PATH', 'templates/');
 define('TEMPLATEC_PATH', 'templates/_compiled/');
 define('MEDIA_URL', ROOT_URL . 'media/');
+define('STATIC_URL', ROOT_URL . 'static/');
 
 /*
  * Facebook App
@@ -34,10 +37,10 @@ define('SECRET', '');
 /*
  * Types
  */
-define('TYPE_INT', 1);
-define('TYPE_STR', 2);
-define('TYPE_TEXT', 3);
-define('TYPE_DATE', 4);
+define('TYPE_INT', 'INTEGER(11)');
+define('TYPE_STR', 'VARCHAR(255)');
+define('TYPE_TEXT', 'TEXT');
+define('TYPE_DATE', 'DATETIME');
 
 
 /*

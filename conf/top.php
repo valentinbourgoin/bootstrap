@@ -12,12 +12,15 @@ require_once LIB_PATH . 'Twig/Autoloader.php';
 require_once LIB_PATH . 'database.class.php';
 require_once LIB_PATH . 'tools.class.php';
 require_once LIB_PATH . 'mail.class.php';
-require_once LIB_PATH . 'object.class.php';
+require_once LIB_PATH . 'model.class.php';
+require_once LIB_PATH . 'controller.class.php';
 
 /* 
  * Models
  */
-spl_autoload_register(array('Tools', 'autoload'));
+spl_autoload_register(array('Model', 'autoload'));
+spl_autoload_register(array('Controller', 'autoload'));
 
+require 'urls.php';
 require 'init.php';
 

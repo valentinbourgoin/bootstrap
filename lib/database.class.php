@@ -8,7 +8,7 @@ class Database {
 	/* Constructeur privé */
 	private function __construct() {	
 		 try {
-            $this->db = mysql_connect(DB_SERVER, DB_USER, DB_PASS);
+            $this->db = mysql_connect(DB_SERVER . ':' . DB_PORT, DB_USER, DB_PASS);
 			mysql_select_db(DB_BASE, $this->db);
         } catch(Exception $e) {
             die("Erreur de connexion à la base de données. Ré-essayez plus tard.");

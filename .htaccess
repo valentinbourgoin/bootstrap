@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# robots.txt
+RewriteRule ^robots.txt$ static/robots.txt [L]
+RewriteRule ^humans.txt$ static/humans.txt [L]
+RewriteRule ^favicon.ico$ static/favicon.ico [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]

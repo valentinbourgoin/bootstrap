@@ -1,6 +1,6 @@
 <?php
 
-class User extends Object {
+class User extends Model {
     protected $tablename = 'user';
     protected $fields = array(
         array('id', TYPE_INT),
