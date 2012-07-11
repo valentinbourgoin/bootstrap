@@ -1,9 +1,12 @@
 RewriteEngine On
 
-# robots.txt
+# Serve static files
 RewriteRule ^robots.txt$ static/robots.txt [L]
 RewriteRule ^humans.txt$ static/humans.txt [L]
+RewriteRule ^crossdomain.xml$ static/crossdomain.xml [L]
 RewriteRule ^favicon.ico$ static/favicon.ico [L]
 
+# Serve index.php for all requests
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [QSA,L]

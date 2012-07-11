@@ -5,8 +5,10 @@ class IndexController extends Controller {
     protected $template = 'index.html';
   
   	public function init() {
-  		$this->assign('hello', 'hello');
-  		parent::init();
+		$this->vars = array(
+			'first_var' => 'hello',
+		);
+  		$this->display();
   	}
 	
     
